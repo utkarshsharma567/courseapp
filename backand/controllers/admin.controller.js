@@ -108,13 +108,13 @@ export const login = async (req, resp) => {
 //user logout
 export const logout = async (req, resp) => {
   try {
-    if (!req.cookies["jwt-token"]) {
-      return resp.status(400).json({
-        message: "No token found first login",
-      });
-    }
+    // Clear the cookie unconditionally
+    resp.clearCookie("jwt-token", {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "none", // important for cross-origin
+    });
 
-    resp.clearCookie("jwt-token"); // yai jwt token clear kardega or logout nevigate kardega
     return resp.status(200).json({
       message: "Logout successful",
     });
@@ -123,3 +123,20 @@ export const logout = async (req, resp) => {
     return resp.status(500).json({ message: "Server error" });
   }
 };
+// export const logout = async (req, resp) => {
+//   try {
+//     if (!req.cookies["jwt-token"]) {
+//       return resp.status(400).json({
+//         message: "No token found first login",
+//       });
+//     }
+
+//     resp.clearCookie("jwt-token"); // yai jwt token clear kardega or logout nevigate kardega
+//     return resp.status(200).json({
+//       message: "Logout successful",
+//     });
+//   } catch (error) {
+//     console.log("Error in logout:", error);
+//     return resp.status(500).json({ message: "Server error" });
+//   }
+// };
