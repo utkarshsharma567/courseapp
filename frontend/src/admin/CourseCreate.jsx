@@ -42,7 +42,7 @@ const CourseCreate = () => {
 
     try {
       const response = await axios.post(
-        "https://courseapp-br7n.onrender.com/courses/create",
+        "https://courseapp-br7n.onrender.com/api/courses/create",
         formData,
         {
           headers: {
