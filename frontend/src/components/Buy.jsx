@@ -33,7 +33,7 @@ const Buy = () => {
     try {
       
       const response = await axios.post(
-        `http://localhost:5001/api/courses/buy/${courseId}`,
+        `https://courseapp-br7n.onrender.com/courses/buy/${courseId}`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
