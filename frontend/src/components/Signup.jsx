@@ -21,7 +21,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "https://courseapp-br7n.onrender.com/users/signup",
+        "https://courseapp-br7n.onrender.com/api/users/signup",
         {
           firstName,
           lastName,
