@@ -6,7 +6,7 @@ const Dashboard = () => {
 
      const handleLogout = async () => {
     try {
-      const response = await axios.get(`https://courseapp-br7n.onrender.com/admin/logout`, {
+      const response = await axios.get(`https://courseapp-br7n.onrender.com/api/admin/logout`, {
         withCredentials: true,
       });
       toast.success(response.data.message);
