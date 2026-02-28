@@ -26,7 +26,7 @@ const Purchases = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:5001/api/users/logout", {
+      await axios.get("https://courseapp-br7n.onrender.com/users/logout", {
         withCredentials: true,
       });
     } catch (error) {
@@ -48,7 +48,7 @@ const Purchases = () => {
 
       try {
         const response = await axios.get(
-          "http://localhost:5001/api/users/purchase",
+          "https://courseapp-br7n.onrender.com/users/purchase",
           {
             headers: { Authorization: `Bearer ${token}` },
             withCredentials: true,
