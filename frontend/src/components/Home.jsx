@@ -21,7 +21,7 @@ const Home = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:5001/api/users/logout", {
+      await axios.get("https://courseapp-br7n.onrender.com/api/users/logout", {
         withCredentials: true,
       });
     } catch (error) {
@@ -44,7 +44,7 @@ const Home = () => {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          "https://courseapp-br7n.onrender.com/courses/getcourses",
+          "https://courseapp-br7n.onrender.com/api/courses/getcourses",
           { withCredentials: true },
         );
         console.log(response.data); // check the response
