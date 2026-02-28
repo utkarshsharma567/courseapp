@@ -35,7 +35,7 @@ const Courses = () => {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          "https://courseapp-br7n.onrender.com/courses/getcourses",
+          "https://courseapp-br7n.onrender.com/api/courses/getcourses",
           { withCredentials: true },
         );
         setCourses(response?.data?.data || []);
