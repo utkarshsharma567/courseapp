@@ -18,7 +18,7 @@ const UpdateCourses = () => {
     const fetchCoursesData = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5001/api/courses/single/${id}`,
+          `https://courseapp-br7n.onrender.com/courses/single/${id}`,
           {
             withCredentials: true,
           },
@@ -67,7 +67,7 @@ const UpdateCourses = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5001/api/courses/update/${id}`,
+        `https://courseapp-br7n.onrender.com/courses/update/${id}`,
         formData,
         {
           headers: {
