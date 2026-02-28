@@ -20,7 +20,7 @@ const Login = () => {
 
   try {
     const response = await axios.post(
-      "https://courseapp-br7n.onrender.com/users/login",
+      "https://courseapp-br7n.onrender.com/api/users/login",
       { email, password },
       {
         withCredentials: true,
