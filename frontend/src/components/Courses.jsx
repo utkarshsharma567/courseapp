@@ -20,7 +20,7 @@ const Courses = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:5001/api/users/logout", {
+      await axios.get("https://courseapp-br7n.onrender.com/users/logout", {
         withCredentials: true,
       });
     } catch (error) {
@@ -35,7 +35,7 @@ const Courses = () => {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5001/api/courses/getcourses",
+          "https://courseapp-br7n.onrender.com/courses/getcourses",
           { withCredentials: true },
         );
         setCourses(response?.data?.data || []);
