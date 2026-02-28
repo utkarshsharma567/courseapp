@@ -21,12 +21,18 @@ const Home = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("https://courseapp-br7n.onrender.com/users/logout", {
+      await axios.get("http://localhost:5001/api/users/logout", {
         withCredentials: true,
       });
     } catch (error) {
       console.log(error.response?.data);
     }
+
+    // ⭐ always logout from frontend
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+    toast.success("Logged out");
+  };
 
     // ⭐ always logout from frontend
     localStorage.removeItem("token");
