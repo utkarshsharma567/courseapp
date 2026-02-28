@@ -23,7 +23,7 @@ const OurCourses = () => {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5001/api/courses/getcourses",
+          "https://courseapp-br7n.onrender.com/courses/getcourses",
           { withCredentials: true }
         );
 
@@ -43,7 +43,7 @@ const OurCourses = () => {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5001/api/courses/delete/${id}`,
+        `https://courseapp-br7n.onrender.com/courses/delete/${id}`,
         {
           headers: {
             Authorization: `Bearer ${admintoken}`,
