@@ -20,7 +20,7 @@ const Courses = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("https://courseapp-br7n.onrender.com/users/logout", {
+      await axios.get("https://courseapp-br7n.onrender.com/api/users/logout", {
         withCredentials: true,
       });
     } catch (error) {
