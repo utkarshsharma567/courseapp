@@ -21,7 +21,7 @@ const AdminSignup = () => {
 
     try {
       const response = await axios.post(
-        "https://courseapp-br7n.onrender.com/admin/signup",
+        "https://courseapp-br7n.onrender.com/api/admin/signup",
         {
           firstName,
           lastName,
