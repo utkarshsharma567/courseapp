@@ -20,7 +20,7 @@ const AdminLogin = () => {
 
   try {
     const response = await axios.post(
-      "http://localhost:5001/api/admin/login",
+      "https://courseapp-br7n.onrender.com/admin/login",
       { email, password },
       {
         withCredentials: true,
