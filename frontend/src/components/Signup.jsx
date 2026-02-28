@@ -21,7 +21,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5001/api/users/signup",
+        "https://courseapp-br7n.onrender.com/users/signup",
         {
           firstName,
           lastName,
